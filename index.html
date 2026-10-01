@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Malhotra Studio | Wedding & Cinematic Photography</title>
+
+  <meta name="description"
+        content="Malhotra Studio Delhi — Wedding photography, cinematic pre-weddings, events and portraits.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+        rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #111111;
+      --white: #ffffff;
+      --cream: #f4f1eb;
+      --gray: #777777;
+      --light-gray: #e8e5df;
+      --max: 1280px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--white);
+      color: var(--black);
+      font-family: "DM Sans", sans-serif;
+      overflow-x: hidden;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: auto;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    nav {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #dedbd5;
+      background: #fff;
+      position: relative;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 42px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .nav-links a {
+      transition: opacity .3s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: .5;
+    }
+
+    .book-btn {
+      background: #111;
+      color: #fff;
+      padding: 13px 22px;
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      transition: .3s;
+    }
+
+    .book-btn:hover {
+      background: #333;
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      padding: 85px 0 65px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 70px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      color: #555;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(65px, 9vw, 145px);
+      line-height: .84;
+      font-weight: 500;
+      letter-spacing: -6px;
+    }
+
+    .hero h1 span {
+      display: block;
+      font-style: italic;
+    }
+
+    .hero-description {
+      max-width: 450px;
+      margin: 35px 0;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .primary-btn {
+      display: inline-block;
+      background: #111;
+      color: #fff;
+      padding: 16px 25px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-size: 12px;
+      transition: .3s;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: #333;
+    }
+
+    .secondary-btn {
+      padding: 15px 4px;
+      border-bottom: 1px solid #111;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-size: 12px;
+    }
+
+    .hero-images {
+      position: relative;
+      min-height: 650px;
+    }
+
+    .hero-main {
+      height: 590px;
+      width: 82%;
+      margin-left: auto;
+    }
+
+    .hero-small {
+      position: absolute;
+      width: 40%;
+      height: 250px;
+      left: 0;
+      bottom: 0;
+      border: 10px solid white;
+    }
+
+    /* ================= MARQUEE ================= */
+
+    .marquee {
+      background: #111;
+      color: #fff;
+      overflow: hidden;
+      padding: 25px 0;
+      white-space: nowrap;
+    }
+
+    .marquee-track {
+      display: inline-flex;
+      gap: 45px;
+      animation: move 18s linear infinite;
+      font-family: "Playfair Display", serif;
+      font-size: 35px;
+      font-style: italic;
+    }
+
+    @keyframes move {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* ================= ABOUT ================= */
+
+    .section {
+      padding: 130px 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 90px;
+      align-items: center;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    .about h2,
+    .services h2,
+    .gallery h2 {
+      font-family: "Playfair Display", serif;
+      font-weight: 500;
+      font-size: clamp(50px, 6vw, 82px);
+      line-height: .95;
+    }
+
+    .about h2 em,
+    .services h2 em,
+    .gallery h2 em {
+      font-style: italic;
+    }
+
+    .about-text {
+      margin-top: 35px;
+      max-width: 550px;
+      color: #555;
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .about-link {
+      display: inline-block;
+      margin-top: 30px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-bottom: 1px solid #111;
+      padding-bottom: 7px;
+    }
+
+    .about-image {
+      height: 600px;
+    }
+
+    /* ================= SERVICES ================= */
+
+    .services {
+      background: var(--cream);
+    }
+
+    .services-intro {
+      max-width: 550px;
+      margin: 30px 0 70px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .service-card {
+      position: relative;
+      height: 550px;
+      overflow: hidden;
+      background: #222;
+    }
+
+    .service-card img {
+      height: 100%;
+      transition: transform .7s ease;
+    }
+
+    .service-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .service-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,.75),
+        transparent 55%
+      );
+    }
+
+    .service-info {
+      position: absolute;
+      bottom: 28px;
+      left: 28px;
+      right: 20px;
+      color: #fff;
+      z-index: 2;
+    }
+
+    .service-number {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      opacity: .8;
+    }
+
+    .service-info h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 34px;
+      font-weight: 500;
+      margin-top: 8px;
+    }
+
+    /* ================= GALLERY ================= */
+
+    .gallery-intro {
+      max-width: 500px;
+      margin: 30px 0 60px;
+      color: #666;
+      line-height: 1.8;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: 110px;
+      gap: 12px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+    }
+
+    .gallery-item img {
+      height: 100%;
+      transition: transform .6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .g1 {
+      grid-column: span 5;
+      grid-row: span 5;
+    }
+
+    .g2 {
+      grid-column: span 3;
+      grid-row: span 3;
+    }
+
+    .g3 {
+      grid-column: span 4;
+      grid-row: span 4;
+    }
+
+    .g4 {
+      grid-column: span 3;
+      grid-row: span 4;
+    }
+
+    .g5 {
+      grid-column: span 5;
+      grid-row: span 3;
+    }
+
+    /* ================= QUOTE ================= */
+
+    .quote {
+      background: #111;
+      color: #fff;
+      padding: 130px 20px;
+      text-align: center;
+    }
+
+    .quote-small {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      margin-bottom: 35px;
+      opacity: .7;
+    }
+
+    .quote h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(42px, 6vw, 80px);
+      font-weight: 400;
+      max-width: 950px;
+      margin: auto;
+      line-height: 1.1;
+    }
+
+    /* ================= STATS ================= */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid #ddd;
+    }
+
+    .stat {
+      padding: 65px 20px;
+      text-align: center;
+      border-right: 1px solid #ddd;
+    }
+
+    .stat:last-child {
+      border-right: 0;
+    }
+
+    .stat strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-size: 52px;
+      font-weight: 500;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 10px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #777;
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact {
+      padding: 150px 0;
+      text-align: center;
+    }
+
+    .contact-label {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      color: #777;
+      margin-bottom: 25px;
+    }
+
+    .contact h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(65px, 10vw, 140px);
+      line-height: .85;
+      font-weight: 500;
+    }
+
+    .contact h2 em {
+      font-style: italic;
+    }
+
+    .contact-info {
+      margin-top: 45px;
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    .contact-info a {
+      border-bottom: 1px solid #111;
+      padding-bottom: 4px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 45px 0 30px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      padding-bottom: 35px;
+      border-bottom: 1px solid #333;
+    }
+
+    .footer-logo {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 25px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
+    .footer-bottom {
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: #888;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 900px) {
+
+      .nav-links,
+      nav .book-btn {
+        display: none;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links.active {
+        display: flex;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        width: 100%;
+        padding: 30px;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .hero h1 {
+        letter-spacing: -3px;
+      }
+
+      .hero-images {
+        min-height: 500px;
+      }
+
+      .hero-main {
+        height: 450px;
+        width: 88%;
+      }
+
+      .hero-small {
+        height: 200px;
+        width: 43%;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+      }
+
+      .about-image {
+        height: 500px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .service-card {
+        height: 480px;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat:nth-child(2) {
+        border-right: 0;
+      }
+
+      .stat:nth-child(-n+2) {
+        border-bottom: 1px solid #ddd;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 180px;
+      }
+
+      .g1,
+      .g2,
+      .g3,
+      .g4,
+      .g5 {
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+
+      .footer-top,
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: 90%;
+      }
+
+      nav {
+        height: 70px;
+      }
+
+      .nav-links.active {
+        top: 70px;
+      }
+
+      .hero h1 {
+        font-size: 64px;
+      }
+
+      .hero-images {
+        min-height: 400px;
+      }
+
+      .hero-main {
+        height: 370px;
+      }
+
+      .hero-small {
+        height: 150px;
+      }
+
+      .section {
+        padding: 90px 0;
+      }
+
+      .about h2,
+      .services h2,
+      .gallery h2 {
+        font-size: 52px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        height: 500px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px;
+      }
+
+      .g1,
+      .g2,
+      .g3,
+      .g4,
+      .g5 {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stat {
+        padding: 45px 10px;
+      }
+
+      .stat strong {
+        font-size: 40px;
+      }
+
+      .contact {
+        padding: 100px 0;
+      }
+
+      .contact h2 {
+        font-size: 70px;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+
+  <nav>
+    <div class="container" style="display:flex; width:92%; align-items:center; justify-content:space-between;">
+
+      <a href="#home" class="logo">MALHOTRA.</a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <a class="book-btn"
+         href="https://wa.me/919871440572"
+         target="_blank">
+        Book Now
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        ☰
+      </button>
+
+    </div>
+  </nav>
+
+
+  <!-- ================= HERO ================= -->
+
+  <main id="home">
+
+    <section class="hero">
+      <div class="container">
+
+        <div class="hero-grid">
+
+          <div>
+
+            <div class="eyebrow">
+              MALHOTRA STUDIO • DELHI
+            </div>
+
+            <h1>
+              YOUR
+              <span>STORY,</span>
+              FRAMED.
+            </h1>
+
+            <p class="hero-description">
+              Wedding photography, cinematic pre-weddings,
+              events and portraits — created to make ordinary
+              moments feel unforgettable.
+            </p>
+
+            <div class="hero-buttons">
+
+              <a href="https://wa.me/919871440572"
+                 target="_blank"
+                 class="primary-btn">
+                Book Your Date →
+              </a>
+
+              <a href="#gallery"
+                 class="secondary-btn">
+                View Our Work
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="hero-images">
+
+            <img
+              class="hero-main"
+              src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=90"
+              alt="Wedding photography">
+
+            <img
+              class="hero-small"
+              src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=700&q=90"
+              alt="Wedding couple">
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================= MARQUEE ================= -->
+
+    <div class="marquee">
+      <div class="marquee-track">
+        CAPTURE LOVE FOREVER • CAPTURE LOVE FOREVER •
+        CAPTURE LOVE FOREVER • CAPTURE LOVE FOREVER •
+      </div>
+    </div>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="section about" id="about">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div>
+
+            <div class="section-label">
+              About Malhotra Studio
+            </div>
+
+            <h2>
+              Not just
+              <br>
+              photographs.
+              <br>
+              <em>Memories.</em>
+            </h2>
+
+            <p class="about-text">
+              We believe the best photographs aren't posed.
+              They're felt. Our approach combines natural
+              emotions, cinematic composition and modern
+              editing to create photographs you'll want to
+              look at years from now.
+            </p>
+
+            <a
+              href="https://wa.me/919871440572"
+              target="_blank"
+              class="about-link">
+              Talk To Us →
+            </a>
+
+          </div>
+
+          <div>
+            <img
+              class="about-image"
+              src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1000&q=90"
+              alt="Malhotra Studio wedding photography">
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="section services" id="services">
+
+      <div class="container">
+
+        <div class="section-label">
+          Our Services
+        </div>
+
+        <h2>
+          WE FRAME
+          <br>
+          <em>EVERYTHING.</em>
+        </h2>
+
+        <p class="services-intro">
+          From your first look to the final dance,
+          we cover every important chapter.
+        </p>
+
+
+        <div class="service-grid">
+
+          <div class="service-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=90"
+              alt="Wedding">
+
+            <div class="service-info">
+              <div class="service-number">
+                01 — WEDDINGS
+              </div>
+
+              <h3>Forever</h3>
+            </div>
+
+          </div>
+
+
+          <div class="service-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=90"
+              alt="Pre Wedding">
+
+            <div class="service-info">
+              <div class="service-number">
+                02 — PRE-WEDDING
+              </div>
+
+              <h3>Love Story</h3>
+            </div>
+
+          </div>
+
+
+          <div class="service-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=900&q=90"
+              alt="Events">
+
+            <div class="service-info">
+              <div class="service-number">
+                03 — EVENTS
+              </div>
+
+              <h3>The Energy</h3>
+            </div>
+
+          </div>
+
+
+          <div class="service-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=90"
+              alt="Portrait">
+
+            <div class="service-info">
+              <div class="service-number">
+                04 — PORTRAITS
+              </div>
+
+              <h3>Your Identity</h3>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= GALLERY ================= -->
+
+    <section class="section gallery" id="gallery">
+
+      <div class="container">
+
+        <div class="section-label">
+          Selected Work
+        </div>
+
+        <h2>
+          THE
+          <br>
+          <em>GALLERY.</em>
+        </h2>
+
+        <p class="gallery-intro">
+          A few frames from celebrations, couples
+          and unforgettable moments.
+        </p>
+
+
+        <div class="gallery-grid">
+
+          <div class="gallery-item g1">
+            <img
+              src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=90"
+              alt="Wedding couple">
+          </div>
+
+          <div class="gallery-item g2">
+            <img
+              src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=90"
+              alt="Wedding">
+          </div>
+
+          <div class="gallery-item g3">
+            <img
+              src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=900&q=90"
+              alt="Event">
+          </div>
+
+          <div class="gallery-item g4">
+            <img
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=90"
+              alt="Portrait">
+          </div>
+
+          <div class="gallery-item g5">
+            <img
+              src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=90"
+              alt="Wedding decoration">
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= QUOTE ================= -->
+
+    <section class="quote">
+
+      <div class="quote-small">
+        MALHOTRA STUDIO
+      </div>
+
+      <h2>
+        "The best thing about memories
+        is making them."
+      </h2>
+
+    </section>
+
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats">
+
+      <div class="stat">
+        <strong>1000+</strong>
+        <span>Stories Captured</span>
+      </div>
+
+      <div class="stat">
+        <strong>25+</strong>
+        <span>Years Experience</span>
+      </div>
+
+      <div class="stat">
+        <strong>4</strong>
+        <span>Photography Styles</span>
+      </div>
+
+      <div class="stat">
+        <strong>∞</strong>
+        <span>Memories</span>
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+      <div class="container">
+
+        <div class="contact-label">
+          Let's Create
+        </div>
+
+        <h2>
+          YOUR
+          <br>
+          <em>DATE.</em>
+          <br>
+          OUR FRAME.
+        </h2>
+
+        <div class="contact-info">
+
+          <a href="tel:+919871440572">
+            Call / WhatsApp +91 98714 40572
+          </a>
+
+          <a
+            href="https://www.instagram.com/malhotra_studio/"
+            target="_blank">
+            Instagram @malhotra_studio
+          </a>
+
+          <a
+            href="https://wa.me/919871440572"
+            target="_blank">
+            WhatsApp For Packages →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-logo">
+          MALHOTRA STUDIO
+        </div>
+
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 MALHOTRA STUDIO
+        </span>
+
+        <span>
+          WEDDINGS • PRE-WEDDINGS • EVENTS • PORTRAITS
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+
+    // Simple reveal animation
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+    document
+      .querySelectorAll(
+        ".about-grid, .service-card, .gallery-item, .stat, .contact h2"
+      )
+      .forEach(el => {
+
+        el.style.opacity = "0";
+        el.style.transform = "translateY(25px)";
+        el.style.transition =
+          "opacity .8s ease, transform .8s ease";
+
+        observer.observe(el);
+
+      });
+
+  </script>
+
+</body>
+</html>
